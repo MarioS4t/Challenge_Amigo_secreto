@@ -27,3 +27,17 @@ function actualizarLista() {
         lista.appendChild(li);
     });
 }
+
+// Funcion para sortear amigos
+function sortearAmigo() {
+    if (amigos.length === 0) {
+        alert("La lista está vacía. Agregue nombres antes de sortear.");
+        return;
+    }
+
+    const indiceAleatorio = Math.floor(Math.random() * amigos.length);
+    const ganador = amigos[indiceAleatorio];
+
+    const resultado = document.getElementById("resultado");
+    resultado.innerHTML = `<p>🎉 ¡El amigo secreto es: <strong>${ganador}</strong>! 🎉</p>`;
+}
